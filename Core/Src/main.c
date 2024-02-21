@@ -130,8 +130,8 @@ TIM3->CCMR1 |= (1 << 3); // OC1PE(3) Output compare 1 preload enable.
 TIM3->CCER |= (1 << 0); // CC1E(0) Capture/Compare 1 output enable.
 TIM3->CCER |= (1 << 4); // CC2E(4) Capture/Compare 2 output enable.
 
-TIM3->CCR1 = 1000; // 250 1200
-TIM3->CCR2 = 1000; // 250 20
+TIM3->CCR1 = 250; // 250 1200
+TIM3->CCR2 = 250; // 250 20
 
 GPIOC->AFR[0] &= ~GPIO_AFRL_AFSEL6; // (0 << 24)|(0 << 25)|(0 << 26)|(0 << 27);
 GPIOC->AFR[0] &= ~GPIO_AFRL_AFSEL7;
